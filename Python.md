@@ -48,6 +48,26 @@
   定义一个函数：给了函数一个名称，指定了函数里包含的参数，和代码块结构。  
   这个函数的基本结构完成以后，你可以通过另一个函数调用执行，也可以直接从 Python 命令提示符执行。
   
+ ## Python数据结构
+  ### 遍历技巧
+    在序列中遍历时，索引位置和对应值可以使用 enumerate() 函数同时得到：  
+     ``` Python
+      for i, v in enumerate(['tic', 'tac', 'toe']):
+          print(i, v)   
+     ```
+     输入结果：
+      0 tic
+      1 tac
+      2 toe
   
-
-  
+    同时遍历两个或更多的序列，可以使用 zip() 组合：  
+    ``` Python
+      questions = ['name', 'quest', 'favorite color']
+      answers = ['lancelot', 'the holy grail', 'blue']
+      for q, a in zip(questions, answers):
+          print('What is your {0}?  It is {1}.'.format(q, a)) 
+     ```
+     输入结果：
+      What is your name?  It is lancelot.
+      What is your quest?  It is the holy grail.
+      What is your favorite color?  It is blue.
